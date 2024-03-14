@@ -5,7 +5,7 @@ import goodsSlice from './slices/goods-slice';
 import slickGoodsSlice from './slices/slick-goods-slice';
 
 export const store = configureStore({
-    reducer: { slickGoodsSlice, cartSlice, goodsSlice }
+	reducer: { slickGoodsSlice, cartSlice, goodsSlice }
 });
 
 export type RootState = ReturnType<typeof store.getState>;

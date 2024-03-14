@@ -1,5 +1,11 @@
-import { CatalogPage } from '@/components/pages';
+import { Suspense } from 'react';
+
+import { CatalogPage } from '@/pages/index';
 
 export default function Catalog() {
-    return <CatalogPage />
+	return (
+		<Suspense fallback={<>loading...</>}>
+			<CatalogPage />
+		</Suspense>
+	);
 }
