@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+main {
+	height: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+
+*::-webkit-scrollbar {
+	@apply w-1;
+}
+
+*::-webkit-scrollbar-track {
+	@apply bg-black/20;
+}
+
+*::-webkit-scrollbar-thumb {
+	@apply bg-orange-400 rounded-[40px];
+}
+
+.ant-select-selection-item {
+	font-size: 18px !important;
+}
