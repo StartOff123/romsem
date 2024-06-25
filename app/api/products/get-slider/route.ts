@@ -1,14 +1,18 @@
+import { Prisma } from '@prisma/client';
 import { NextRequest, NextResponse } from 'next/server';
 
 import { db } from '@lib/db';
 
-export async function GET(_: NextRequest) {
+export async function GET(req: NextRequest) {
 	try {
+		const take = req.nextUrl.searchParams.get('take') as string;
+		const orderBy = req.nextUrl.searchParams.get('order-by') as 'asc' | 'desc';
+
 		const products = await db.product.findMany({
 			orderBy: {
-				popularity: 'asc'
+				popularity: orderBy
 			},
-			take: 5
+			take: Number(take)
 		});
 
 		if (!products) return new NextResponse('Not Found', { status: 404 });

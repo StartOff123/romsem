@@ -11,7 +11,9 @@ type SliderStoreType = {
 export const useSliderStore = create<SliderStoreType>((set) => ({
 	sliderItems: null,
 	getSloderItems: async () => {
-		const { data } = (await axios.get('/api/products/get-slider')) as {
+		const { data } = (await axios.get(
+			'/api/products/get-slider?take=5&order-by=asc'
+		)) as {
 			data: IProduct[];
 		};
 

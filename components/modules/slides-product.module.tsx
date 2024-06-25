@@ -39,7 +39,7 @@ const SlidesProduct: React.FC<SlidesProductType> = ({ type }) => {
 							// @ts-ignore
 							swiper.params.navigation.nextEl = navigationNextRef.current;
 						}}
-						className='py-1'
+						className="py-1"
 					>
 						{products.map((item) => (
 							<SwiperSlide key={item.id}>
@@ -49,13 +49,13 @@ const SlidesProduct: React.FC<SlidesProductType> = ({ type }) => {
 					</Swiper>
 					<div
 						ref={navigationPrevRef}
-						className="absolute top-1/2 -left-9 -translate-y-1/2 z-[1] w-8 h-8 bg-zinc-300 rounded-full flex items-center justify-center hover:bg-orange-400 transition cursor-pointer"
+						className="absolute top-1/2 -left-9 -translate-y-1/2 z-[1] w-8 h-8 bg-zinc-300 rounded-full flex items-center justify-center hover:bg-orange-400 transition cursor-pointer select-none"
 					>
 						<ChevronLeft size={20} className="text-white" />
 					</div>
 					<div
 						ref={navigationNextRef}
-						className="absolute top-1/2 -right-9 -translate-y-1/2 z-[1] w-8 h-8 bg-zinc-300 rounded-full flex items-center justify-center hover:bg-orange-400 transition cursor-pointer"
+						className="absolute top-1/2 -right-9 -translate-y-1/2 z-[1] w-8 h-8 bg-zinc-300 rounded-full flex items-center justify-center hover:bg-orange-400 transition cursor-pointer select-none"
 					>
 						<ChevronRight size={20} className="text-white" />
 					</div>
